@@ -1,0 +1,196 @@
+.chat{
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.chat__left{
+    min-width: rem(170px);
+}
+.menu__item{
+    position: relative;
+    padding: rem(13px) 0;
+    &.menu__item_active{
+        .menu__link{
+            @include SansPro(bold);
+            border-bottom: 2px solid $darkblue;
+        }
+        &::after{
+            display: block;
+        }
+    }
+    &::after{
+        display: none;
+        content:"";
+        position: absolute;
+        border: rem(16px) solid transparent;
+        border-right: rem(16px) solid $darkgrey;
+        right: 0;
+        top: 50%;
+        margin-top: rem(-16px);
+    }
+}
+.menu__link{
+    display: inline-block;
+    @include SansPro(semibold);
+    color: black;
+    text-decoration: none;
+    font-size: rem(16px);
+    border-bottom: 2px solid transparent;
+    transition: border .3s;
+    &:hover{
+        border-bottom: 2px solid $darkblue;
+    }
+}
+.chat__right{
+    width: rem(1000px);
+    background-color: $darkgrey;
+    color: white;
+    padding: rem(40px) rem(60px);
+}
+.chat__title{
+    @include SansPro(bold);
+    font-size: rem(25px);
+    max-width: rem(540px);
+}
+.chat__subtitle{
+    @include SansPro();
+    font-size: rem(15px);
+    max-width: rem(580px);
+    margin-bottom: rem(50px);
+}
+.chat__block{
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+        width: rem(410px);
+        height: rem(410px);
+        background: radial-gradient(circle,rgba(white, .2) 2px, rgba(255, 255, 255, 0) 3px) 0 0;
+        background-size:  25px 25px;
+        background-repeat: repeat;
+        position: absolute;
+        top: rem(-30px);
+        left: rem(100px);
+    }
+}
+.message{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: rem(600px);
+}
+.message__item{
+    width:100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: rem(-20px);
+    position: relative;
+    &:first-child{
+        .message__content{
+            width: rem(300px);
+            justify-content: flex-start;
+        }
+    }
+    &:nth-child(even){
+        flex-direction: row;
+        .message__content{
+            margin-right: rem(25px);
+            color:white;
+            &:after{
+                background: url(/assets/images/svg/web2.svg) center center no-repeat;
+            }
+        }
+    }
+}
+.message__content{
+    position: relative;
+    margin-bottom: rem(30px);
+    margin-left: rem(25px);
+    width: rem(245px);
+    font-size: rem(12px);
+    padding: rem(20px);
+    z-index: 1;
+    color: black;
+    &:after{
+        content: "";
+        width: 105%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: url(/assets/images/svg/web1.svg) center center no-repeat;
+    }
+}
+
+.message__user{
+    width: rem(50px);
+    height: rem(50px);
+    border-radius: 50%;
+    background-color: #fff;
+}
+.message__item_bot{
+    .message__user_image{
+        content: "";
+        width: 90%;
+        height: 90%;
+        background: url(/assets/images/man.png) center 5px no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+}
+.message__item_user{
+    .message__user_image{
+        content: "";
+        width: 85%;
+        height: 85%;
+        background: url(/assets/images/female.png) center 5px no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+}
+.message__note{
+    position: absolute;
+    left: 100%;
+    margin-left: rem(100px);
+    bottom: rem(45px);
+    width: rem(200px);
+    font-size: rem(12px);
+    @include Jura();
+    &.message__note_none{
+        display: none;
+    }
+    &:before{
+        content:"";
+        position: absolute;
+        width: rem(26px);
+        height: rem(26px);
+        right: 100%;
+        margin-right: rem(15px);
+        top: 40%;
+        margin-top: rem(-13px);
+        border-radius: 50%;
+        background: radial-gradient(circle closest-side, #ababab rem(2px), white rem(3px), white rem(5px), 
+        rgba(white, .5) rem(6px), rgba(white, .5) rem(9px), rgba(white, .17) rem(10px), rgba(white, .17) rem(12px));
+    }
+    &:after{
+        content:"";
+        position: absolute;
+        right: 100%;
+        margin-right: rem(50px);
+        top: 40%;
+        margin-top: rem(-5px);
+        width: rem(120px);
+        height: rem(10px);
+        right: 100%;
+        background: radial-gradient(circle,white 2px, rgba(255, 255, 255, 0) 3px) 0 0;
+        background-size:  rem(25px) rem(10px);
+        background-repeat: repeat;
+    }
+}

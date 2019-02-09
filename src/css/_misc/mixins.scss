@@ -39,4 +39,20 @@
         clear: both;
     }
 }
+@mixin SansPro($style: regular){
+    @if $style == regular{
+        font-family: 'source_sans_proregular';
+    }
+    @if $style == bold{
+        font-family: 'source_sans_problack';
+    }
+    @if $style == semibold{
+        font-family: 'source_sans_prosemibold';
+    }
+}
+@mixin Jura($style: regular){
+    @if $style == regular{
+        font-family: 'juraregular';
+    }
+}
  

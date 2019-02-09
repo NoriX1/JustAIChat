@@ -1,13 +1,18 @@
 // vars
 // $footer_height:50px;
-$container_width:1140px;
+$container_width:1160px;
 $body_font-size:16px;
 $body_line-height:1.42;
+$darkgrey: #333333;
+$darkblue: #187ECF;
+$blue: #357DFB;
+$grey: #F0F0F0;
 
 // layout
+@import "_misc/fonts";
 @import "_misc/mixins";
 @import "_misc/normalize";
 @import "_misc/adjustment";
 
 // styles
-//@import "sections/header";
+@import "sections/chat";
