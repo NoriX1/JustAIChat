@@ -1,0 +1,14 @@
+{
+  "name": "project",
+  "description": "new project",
+  "main": "gulpfile.js",
+  "authors": [
+    "user"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "project"
+  ],
+  "homepage": "",
+  "private": true
+}
