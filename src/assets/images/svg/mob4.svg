@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 277.782 58.595">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4ea7ec"/>
+      <stop offset="1" stop-color="#187ecf"/>
+    </linearGradient>
+  </defs>
+  <path id="моб_4" data-name="моб 4" class="cls-1" d="M-1725.593,55.157h-.063a6.805,6.805,0,0,0-1.125,0h-81.443a6.805,6.805,0,0,0-1.125,0h-42.5a6.805,6.805,0,0,0-1.125,0h-90.82a12.63,12.63,0,0,1-1.993-.158H-1980a10,10,0,0,1-10-10V10a10,10,0,0,1,10-10h257a10,10,0,0,1,10,10V45a9.954,9.954,0,0,1-1.189,4.733,27.4,27.4,0,0,0,.221,3.05,14.824,14.824,0,0,0,1.75,5.813C-1715.655,57.47-1720.968,55.22-1725.593,55.157Z" transform="translate(1990)"/>
+</svg>
