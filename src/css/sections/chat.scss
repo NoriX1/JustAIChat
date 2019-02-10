@@ -22,6 +22,9 @@
         max-width: 100%;
         overflow-x: scroll;
     }
+    @include phone{
+        margin-bottom: rem(25px);
+    }
 }
 .menu__item{
     position: relative;
@@ -148,18 +151,6 @@
     &:first-child{
         .message__content{
             width: rem(300px);
-            justify-content: flex-start;
-            @include phone{
-                width: 20.7rem;
-            }
-            &:after{
-                @include phone{
-                    background: url(/assets/images/svg/mob1.svg) center center no-repeat;
-                    width: 115%;
-                    height: 115%;
-                    left: -90px;
-                }
-            }
         }
     }
 }
@@ -167,15 +158,9 @@
     flex-direction: row;
     .message__content{
         margin-right: rem(25px);
-        @include phone{
-            margin-right: rem(15px);
-        }
         color:white;
         &:after{
             background: url(/assets/images/svg/web2.svg) center center no-repeat;
-            @include phone{
-                background: url(/assets/images/svg/mob2.svg) center center no-repeat;
-            }
         }
     }
 }
@@ -188,9 +173,6 @@
     padding: rem(20px);
     z-index: 1;
     color: black;
-    @include phone{
-        margin-left: rem(5px);
-    }
     &:after{
         content: "";
         width: 105%;
@@ -200,9 +182,6 @@
         left: 0;
         z-index: -1;
         background: url(/assets/images/svg/web1.svg) center center no-repeat;
-        @include phone{
-            background: url(/assets/images/svg/mob3.svg) center center no-repeat;
-        }
     }
 }
 
@@ -218,7 +197,7 @@
         content: "";
         width: 90%;
         height: 90%;
-        background: url(/assets/images/man.png) center 5px no-repeat;
+        background: url(/assets/images/man.png) center rem(5px) no-repeat;
         background-size: contain;
         margin: 0 auto;
         
@@ -229,7 +208,7 @@
         content: "";
         width: 85%;
         height: 85%;
-        background: url(/assets/images/female.png) center 5px no-repeat;
+        background: url(/assets/images/female.png) center rem(5px) no-repeat;
         background-size: contain;
         margin: 0 auto;
         
@@ -275,5 +254,69 @@
         background: radial-gradient(circle,white 2px, rgba(255, 255, 255, 0) 3px) 0 0;
         background-size:  rem(25px) rem(10px);
         background-repeat: repeat;
+    }
+}
+@include phone{
+    .message__item{
+        .message__content{
+            margin: 0;
+            width: 100%;
+            font-size: .9rem;
+            &:after{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &.message__item_user{
+            .message__content{
+                margin-bottom: rem(25px);
+                margin-right: rem(10px);
+                padding-bottom: 1.45rem;
+                &:after{
+                    height: 5.2rem;
+                    background: url(/assets/images/svg/mob2.svg) 0 center no-repeat;
+                }
+            }
+        }
+        &.message__item_bot{
+            margin-bottom: 1rem;
+            .message__content{
+                margin-bottom: rem(15px);
+                margin-left: rem(10px);
+            }
+        }
+        &:first-child{
+            margin-bottom: .5rem;
+            .message__content{
+                width: 100%;
+                height: 100%;
+                &:after{
+                    background: url(/assets/images/svg/mob1.svg) 0 25% no-repeat;
+                }
+            }
+        }
+        &:nth-child(3){
+            .message__content{
+                width: 100%;
+                &:after{
+                    background: url(/assets/images/svg/mob3.svg) 0 center no-repeat;
+                }
+            }
+
+        }
+        &:nth-child(4){
+            .message__content{
+                &:after{
+                    background: url(/assets/images/svg/mob4.svg) 0 100% no-repeat;
+                }
+            }
+        }
+        &:nth-child(5){
+            .message__content{
+                &:after{
+                    background: url(/assets/images/svg/mob5.svg) 0 center no-repeat;
+                }
+            }
+        }
     }
 }
