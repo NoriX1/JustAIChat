@@ -1,10 +1,23 @@
 html, body{
     width: 100%;
     height: 100%;
+    font-size: $body_font-size;
+    @include laptop{
+        font-size: 13px;
+    }
+    @include tablet{
+        background-color: $darkgrey;
+        font-size: 18px;
+    }
+    @include phonelandscape{
+        font-size: 26px;
+    }
+    @include phone{
+        font-size: 44px;
+    }
 }
 
 body{
-    font-size: $body_font-size;
     line-height: $body_line-height;
     -webkit-font-smoothing: antialiased;
     @include SansPro();
@@ -43,7 +56,7 @@ body{
         width: 540px;
     } 
     @include phone{
-        width: auto;
+        width: 90%;
     }
 }
 
