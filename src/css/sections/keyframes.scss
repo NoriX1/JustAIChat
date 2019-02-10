@@ -1,0 +1,43 @@
+@keyframes slideup{
+    0%{
+        transform: translateY(100%);
+    }
+    6.66%{
+        transform: translateY(70%);
+    }
+    20%{
+        transform: translateY(70%);
+    }
+    26.66%{
+        transform: translateY(53%);
+    }
+    40%{
+        transform: translateY(53%);
+    }
+    46.66%{
+        transform: translateY(35%);
+    }
+    60%{
+        transform: translateY(35%);
+    }
+    66.66%{
+        transform: translateY(21%);
+    }
+    80%{
+        transform: translateY(21%);
+    }
+    86.66%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
