@@ -108,13 +108,15 @@
     @include SansPro();
     font-size: rem(15px);
     max-width: rem(580px);
-    margin-bottom: rem(50px);
+    margin-bottom: rem(30px);
     @include phonelandscape{
         display: none;
     }
 }
 .chat__block{
     position: relative;
+    overflow: hidden;
+    padding-top: rem(10px);
     &::after{
         content: "";
         display: block;
@@ -124,7 +126,7 @@
         background-size:  25px 25px;
         background-repeat: repeat;
         position: absolute;
-        top: rem(-30px);
+        top: 0;
         left: rem(100px);
         @include tablet{
             display: none;
@@ -136,6 +138,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: rem(600px);
+    animation: slideup 7.5s linear 1s;
 }
 .message__item{
     width:100%;
@@ -149,8 +152,19 @@
         margin-top: rem(8px);
     }
     &:first-child{
+        margin-top: 0;
         .message__content{
             width: rem(300px);
+        }
+    }
+}
+@for $i from 1 to 6{
+    .message__item{
+        opacity: 0;
+        z-index: 1;
+        &:nth-child(#{$i}){
+            animation: fadein .5s linear ($i*0.5s)+$i forwards;
+            
         }
     }
 }
