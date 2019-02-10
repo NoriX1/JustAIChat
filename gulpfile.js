@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
     sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     wiredep = require('gulp-wiredep'),
     useref = require('gulp-useref'),
     svgSprite = require('gulp-svg-sprites'),
@@ -90,7 +90,7 @@ gulp.task('userefFunction', () => {
 });
 gulp.task('min', ()=>{
     return gulp.src('build/js/*.js')
-        .pipe(uglify()) //Минификация скриптов.
+        .pipe(terser()) //Минификация скриптов.
         .pipe(gulp.dest('build/js'));
 });
 gulp.task('browserSyncFunction', ()=>{
